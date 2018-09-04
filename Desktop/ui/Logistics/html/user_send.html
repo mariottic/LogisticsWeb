@@ -1,0 +1,305 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link type="text/css" href="http://www.sf-express.com/opencms/resource/styles/mystyle.css" >
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="../js/func_user_send.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/css_user_sender.css" >
+    <link rel="stylesheet" type="text/script" href="http://www.sf-express.com/resource/scripts/mystyle.css" >
+</head>
+<body class="bg-light">
+<div class="container">
+    <div class="py-5 text-center">
+        <img class="mb-4" src="../未标题-1.png" alt="" width="200" height="200">
+        <h2>Checkout form</h2>
+    </div>
+    <div class="c1" >
+
+        <h4 class="mb-3">I Want To Send</h4>
+        <hr>
+        <h5>Sender Info</h5>
+        <div ><a href="user_send_address.html" data-container="body" data-toggle="popover" data-placement="bottom" data-content="you must complete you address information" id="btm" tabindex="0">
+            input address information here!
+        </a><div>
+            <hr>
+            <form class="needs-validation" name="form1" id="form1" >
+                <input name="statement" type="hidden" value="0">
+                <div class="row">
+
+                    <div class="col-md-10 mb-3">
+                        <input type="hidden" value="" name="transact_number" id="transact_number">
+                        <label >The Door Address</label>
+
+                        <br/>
+                        <input type="hidden" id="sender_name" name="sender_name" value="">
+                        <input type="hidden" id="sender_phone_number" name="sender_phone_number"  value="">
+                    </div>
+
+                </div>
+                <input type="hidden" name="sender_address">
+
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <label >Certification Code</label>
+                        <input type="text"  class="form-control" id="certificaiton_code" name="certificaiton_code"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="you must complete you address information"  onblur="check_code()" required>
+                    </div>
+                    <div class="col-md-2 mb-3" >
+                        <label >&nbsp</label>
+
+                        <input  style="background-color: gainsboro" type = "button" class="form-control" id="code" onclick="createCode()"/> 
+                    </div>
+                </div>
+                <div class="mb-4" id="check_code"  style="font-size: 12px;color: darkred;">&nbsp;</div>
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-3" >
+                        <label >Weight</label>
+                        <div class="dpui-numberPicker">
+
+                        <span >
+                            <button type="button" class="dpui-numberPicker-decrease" id="down"  >-</button>
+                        </span>
+                            <span><input  style="text-align: center" type="text"  value="1.0" class="dpui-numberPicker-input" id="input"  name="weigh" ></span>
+                            <span><button type="button" class="dpui-numberPicker-increase" id="up">+</button></span>
+                        </div>
+                    </div>
+                    <div class="col-md-7 mb-3"  style="border: 5px">
+                        <label >&nbsp</label><br/>
+                        This is only used to remind the dispatcher to pick up your shipment using a more suitable vehicle.
+                        If you send multiple shipments, please select the total weight range here.
+                    </div>
+                </div>
+                <div>
+                    <label >Note</label>
+                    <textarea class="form-control" name="description" maxlength="20" rows="3" placeholder="If the item you sent is not heavy but large, please specify it here, within 20 characters" ></textarea>
+                </div>
+                <hr>
+                <h5>Recipient Info</h5>
+                <hr>
+                <div class="row">
+
+                    <div class="col-md-4 mb-3" >
+                        <label >Name</label>
+                        <input type="text" class="form-control"  name="recipent_name" onblur="check_name()">
+                    </div>
+                    <input type="hidden" name="recipent_address">
+
+                    <div class="col-md-4 mb-3" >
+                        <label  >Telephone</label>
+                        <input type="text" class="form-control" name="recipent_phone_number" id="recipent_phone_number" onblur="check_phone_number()">
+                    </div>
+
+                    <div class="col-md-4 mb-3" >
+                        <label >Fixed Line</label>
+                        <input type="text" class="form-control" name="recipent_fixedline" id="recipent_fixedline " onblur="check_fixedline()" >
+                    </div>
+
+                    <div oninvalid="" id="need_validate" style="display: none">
+                        <font color="#8b0000" size="2"> at least one mobile number, fixed number is required;</font><br/>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-4" style=";color: darkred ;font-size:12px" id="check_name" > &nbsp</div>
+                    <div class="col-md-4 mb-4"  id="check_phone_number" style="font-size: 12px;color: darkred;" > &nbsp</div>
+                    <div class="col-md-4 mb-4"  id="check_fixedline" style="font-size: 12px;color: darkred;" > &nbsp</div>
+                </div>
+                <div class=" mb-4"  >
+                    <font color="#8b0000" size="2">Tips:please fill in at least either mobile number or fixed number</font>
+                </div>
+                <hr>
+                <div align="center">
+                    <button type="submit" class="btn btn-primary " id="orderBtm" style="width: 200px;height:40px;" >
+                        Place The Order
+                    </button>
+                    <p class="mb-1">&copy; 2017-2018 Company Name</p>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+<script>var code ; //在全局定义验证码  
+
+function createCode(){
+    code = "";
+    var codeLength = 4;//验证码的长度 
+    var checkCode = document.getElementById("code");
+    var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',
+        'S','T','U','V','W','X','Y','Z');//随机数 
+    for(var i = 0; i < codeLength; i++) {//循环操作 
+        var index = Math.floor(Math.random()*36);//取得随机数的索引（0~35） 
+        code += random[index];//根据索引取得随机数加到code上 
+    }
+    checkCode.value = code;//把code值赋给验证码 
+}
+function check_name() {
+    var Name=document.form1.recipent_name.value;
+    var nameReg=/^[\u4e00-\u9fa5A-Za-z]{2,20}$/;
+
+    if(Name!=="") {
+        if (!nameReg.test(Name)) {
+            $("#check_name")[0].innerHTML="invalid name!";
+        }
+        else {
+            $("#check_name")[0].innerHTML='&nbsp';
+        }
+    }
+    else{
+        $("#check_name")[0].innerHTML='&nbsp';
+    }
+}
+function check_fixedline() {
+    var fixedline=document.form1.recipent_fixedline.value;
+    var fixedlineReg=(/^\d{3}-\d{7,8}|\d{4}-\d{7,8}$/)
+    if(fixedline!=="") {
+        if (!fixedlineReg.test(fixedline)) {
+            $("#check_fixedline")[0].innerHTML="invalid fixedLine!";
+        }
+        else {
+            $("#check_fixedline")[0].innerHTML='&nbsp';
+        }
+    }
+    else{
+        $("#check_fixedline")[0].innerHTML='&nbsp';
+    }
+}
+function check_code(){
+    var inputCode = document.form1.certificaiton_code.value.toUpperCase(); //取得输入的验证码并转化为大写    
+
+    if(inputCode !== code ) { //若输入的验证码与产生的验证码不一致时 
+        document.form1.certificaiton_code.focus();
+        createCode();//刷新验证码 
+        // document.form1.certificaiton_code.value = "";//清空文本框 
+        $('#certificaiton_code').popover('show');
+
+    }
+}
+function check_phone_number() {
+
+
+    var Phone_number = document.form1.recipent_phone_number.value;
+    var phoneReg = /^1[34578]\d{9}$/;
+    //电话
+    var phone = $.trim(Phone_number);
+    if(Phone_number!=="") {
+        if (!phoneReg.test(phone)) {
+            $("#check_phone_number")[0].innerHTML="invalid number!";
+        }
+        else {
+            $("#check_phone_number")[0].innerHTML='&nbsp';
+        }
+
+    }
+    else{
+        $("#check_phone_number")[0].innerHTML='&nbsp';
+    }
+}
+
+$(document).ready(function () {
+    $.ajax({
+        url: "http://localhost:8080/account/"+sessionStorage.getItem("username"),
+        method: "get",
+        success: function (e) {
+            document.form1.sender_name.value=e.name;
+            document.form1.sender_phone_number.value=e.sender_phone_number;
+        }
+    });
+    var url=window.location.href;
+    if(url.split("?").length>1) {
+        document.form1.sender_address.value=decodeURI(url.split("?")[1].split("&")[0].split("=")[1]);
+        document.form1.recipent_address.value=decodeURI(url.split("?")[1].split("&")[1].split("=")[1]);
+    }
+    // var code ; //在全局定义验证码  
+    //
+    // function createCode(){
+    //     code = "";
+    //     var codeLength = 4;//验证码的长度 
+    //     var checkCode = document.getElementById("code");
+    //     var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',
+    //         'S','T','U','V','W','X','Y','Z');//随机数 
+    //     for(var i = 0; i < codeLength; i++) {//循环操作 
+    //         var index = Math.floor(Math.random()*36);//取得随机数的索引（0~35） 
+    //         code += random[index];//根据索引取得随机数加到code上 
+    //     }
+    //     checkCode.value = code;//把code值赋给验证码 
+    // }
+
+    function validate_number() {
+        if(($("#recipent_phone_number").val()==="")&&($("#repcipent_fixedline").val()==="")){
+            $("#need_validate")[0].style.display="block";
+        }
+    }
+
+
+    $.ajax({
+        url:"http://localhost:8080/account/"+sessionStorage.getItem("username"),
+        method:"get",
+        success:function (e) {
+            $("#sender_name").val(e.name);
+            document.form1.sender_phone_number.value=e.phone_number;
+        }
+    });
+    $('#down').click(function(){
+        if($('#input').val()>0.5) {
+            $('#input').val($('#input').val() - 0.5);
+        }
+
+    });
+
+    $('#up').click(function(){
+
+        $('#input').val(parseFloat($('#input').val())+0.5);
+
+
+    });
+    $("#orderBtm").click(function () {
+        event.preventDefault();
+        var number;
+        var mydate = new Date();
+        number=842+""+mydate.getFullYear()+""+
+            (mydate.getMonth()+1)+""+ //获取当前月份(0-11,0代表1月)
+            mydate.getDate()+""+ //获取当前日(1-31)
+            mydate.getHours()+""+ //获取当前小时数(0-23)
+            mydate.getMinutes()+""+ //获取当前分钟数(0-59)
+            mydate.getSeconds()+"" ;//获取当前秒数(0-59)
+        $("#transact_number").val(number);
+        var transact_number=document.form1.transact_number.value;
+        var sender_name=document.form1.sender_name.value;
+        var sender_address=document.form1.sender_address.value;
+        var sender_phone_number=document.form1.sender_phone_number.value;
+        var recipent_address=document.form1.recipent_address.value;
+        var recipent_phone_number=document.form1.recipent_phone_number.value;
+        var recipent_fixedline=document.form1.recipent_fixedline.value;
+        if(sender_address===""||recipent_address===""){
+            $('#btm').focus();
+            $('#btm').popover('show');
+        }
+
+        if((transact_number!=="")&&(sender_name!=="")&&(sender_address!=="")&&(sender_phone_number!=="")&&(recipent_address!=="")&&((recipent_phone_number!=="")||(recipent_fixedline!==""))) {
+            $.ajax({
+                url: "http://localhost:8080/user_order/save",
+                method: "post",
+                data: decodeURI($("form").serialize()),
+
+                success: function () {
+                    alert("success");
+                    window.location.href="../html/user.html"
+                }
+            });
+        }
+
+
+    });
+
+
+    createCode();
+});
+</script>
+</body>
+</html>

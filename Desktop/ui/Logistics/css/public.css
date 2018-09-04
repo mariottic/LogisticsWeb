@@ -1,0 +1,20 @@
+h3{
+    margin-top: 0px;
+}
+.loginuser {
+    color: rgba(255,255,255,0.5);
+    margin-right: 20px;
+}
+.jumbotron{
+    margin-bottom: 0px;
+}
+.d1{
+    height: 450px;
+    background-color: #eeeeee;
+    width: 80%;
+    margin-left:10%;
+}
+.navbar{
+    border-radius: 0px;
+    margin-bottom: 0px;
+}

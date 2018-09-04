@@ -1,0 +1,95 @@
+
+label{
+    color: white;
+}
+/*div{*/
+    /*float: left;*/
+/*}*/
+
+
+.d1{margin-top: 41% ;
+    background-color: grey;
+    opacity: 0.85;
+    height: 80px;
+    width: 92%;
+    position: absolute;
+    left: 4%;
+
+}
+.d2{
+margin-top: 5px;
+    background-color: grey;
+    opacity: 0.85;
+    height: 70px;
+    width: 92%;
+
+    left: 5%;
+    border-right: 2px solid ghostwhite;
+
+
+}
+.d3{
+    top:10%;
+    background-color: grey;
+    opacity: 0.85;
+    height: 70px;
+    width: 4%;
+    align-content: center;
+
+
+
+}
+
+.i{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.i1{
+    left: 4%;
+    width: 440px;
+    top:10px;
+    height: 50px;
+    position: relative;
+    font-size: 15px;
+    margin-right: -1px;
+    padding-right: 5px;
+}
+.i2{
+    left: 10%;
+    width: 440px;
+    top:10px;
+    height: 50px;
+    position: relative;
+    font-size: 15px;
+
+    border-right: 2px solid #333333;
+
+}
+.l1{
+    left:2%;
+    top:15px;
+    height: 50px;
+    position: relative;
+    font-size: 20px;
+
+}
+.l2{
+    left:7%;
+    top:15px;
+    height: 50px;
+    position: relative;
+    font-size: 20px;
+}
+.i3{
+    top:25px;
+    left: 25%;
+    width: 70px;
+    height: 30px;
+    position: relative;
+    
+}
+.d4{
+    float:left;
+}

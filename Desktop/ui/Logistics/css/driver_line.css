@@ -1,0 +1,164 @@
+#panel {
+    position: fixed;
+    background-color: white;
+    max-height: 90%;
+    overflow-y: auto;
+    top: 10px;
+    right: 10px;
+    width: 280px;
+}
+
+label{
+    color: white;
+}
+/*div{*/
+/*float: left;*/
+/*}*/
+
+
+.d1{margin-top: 10% ;
+    background-color: grey;
+    opacity: 0.85;
+    height: 60px;
+    width: 40%;
+    position: absolute;
+    left: 4%;
+
+}
+.d2{
+    margin-top: 5px;
+    background-color: grey;
+    opacity: 0.85;
+    height: 50px;
+    width: 75%;
+
+    left: 5%;
+    border-right: 2px solid ghostwhite;
+
+
+}
+.d3{
+    top:10%;
+    background-color: grey;
+    opacity: 0.85;
+    height: 40px;
+    width: 4%;
+    align-content: center;
+
+
+
+}
+
+.i{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.i1{
+    left: 7%;
+    width: 120px;
+    top:10px;
+    height: 30px;
+    position: relative;
+    font-size: 15px;
+    margin-right: -1px;
+    padding-right: 5px;
+}
+.i2{
+    left: 10%;
+    width: 120px;
+    top:10px;
+    height: 30px;
+    position: relative;
+    font-size: 15px;
+
+
+
+}
+.l1{
+    left:2%;
+    top:15px;
+    height: 30px;
+    position: relative;
+    font-size: 20px;
+
+}
+.l2{
+    left:7%;
+    top:13px;
+    height: 50px;
+    position: relative;
+    font-size: 20px;
+}
+.l3{
+    left:7%;
+    top:13px;
+    height: 40px;
+    position: relative;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.s1{
+    left:14%;
+    top:12px;
+    height: 25px;
+    width: 60px;
+    position: relative;
+    font-size: 15px;
+}
+.i3{
+    top:5px;
+    left: 40%;
+    width: 115px;
+    height: 20px;
+    position: relative;
+
+}
+.i4{
+    top:9px;
+    left: 40%;
+    width: 115px;
+    height: 20px;
+    position: relative;
+
+}
+.d4{
+    float:left;
+}
+.d5{
+    margin-top: 3% ;
+    background-color: grey;
+    opacity: 0.85;
+    height: 60px;
+    width: 30%;
+    position: absolute;
+    left: 4%;
+
+}
+.d6{
+    margin-top: 5px;
+    background-color: grey;
+    opacity: 0.85;
+    height: 50px;
+    width: 70%;
+
+    left: 5%;
+    border-right: 2px solid ghostwhite;
+}
+.d7{
+    top:3%;
+    background-color: grey;
+    opacity: 0.85;
+    height: 40px;
+    width: 4%;
+    align-content: center;
+}
+.i5{
+    top:18px;
+    left: 60%;
+    width: 80px;
+    height: 30px;
+    position: relative;
+
+}

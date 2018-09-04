@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <title>按起终点名称规划路线</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <script src="../js/func_driveLine.js"></script>
+    <link rel="stylesheet" href="../css/driver_line.css">
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.6&key=5fd41a7a2652ae3b64c5faf81f0abf3e&plugin=AMap.Driving"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<div id="panel"></div>
+<div class="d4 d5 " id="d3"  >
+    <div class="d6 d4" >
+        <label class="l3" >weigh:</label>
+        <input type="text" class="i1 i" placeholder="weigh"  name="tipinput1" id="w" >
+    </div>
+    <div class="d7 d4">
+        <button type="button" class="i5 i"  id="btm2"  data-container="body" data-toggle="popover" data-placement="right" data-content="已经录入快件质量和费用" >确认</button>
+    </div>
+</div>
+<div class="d1 d4 "   >
+    <div class="d2 d4" >
+        <label class="l2" >now:</label>
+        <input type="text" class="i1 i" placeholder="Sender Address required"  name="tipinput1" id="tipinput1"  disabled>
+        <label class="l2" >to:</label>
+        <input type="hidden" class="i2 i" placeholder="Sender Address required"  name="tipinput2" id="tipinput2" required>
+        <select class="s1" id="city">
+            <option>北京	</option>
+            <option>天津</option>
+            <option>河北</option>
+            <option>山西	</option>
+            <option>内蒙	</option>
+            <option>辽宁	</option>
+            <option>吉林	</option>
+            <option>黑龙江</option>
+            <option>上海	</option>
+            <option>江苏	</option>
+            <option>浙江	</option>
+            <option>安徽	</option>
+            <option>福建	</option>
+            <option>江西	</option>
+            <option>山东	</option>
+            <option>河南	</option>
+            <option>湖北	</option>
+            <option>湖南	</option>
+            <option>广东	</option>
+            <option>广西	</option>
+            <option>海南	</option>
+            <option>重庆	</option>
+            <option>四川	</option>
+            <option>贵州	</option>
+            <option>云南	</option>
+            <option>西藏	</option>
+            <option>陕西	</option>
+            <option>甘肃	</option>
+            <option>青海	</option>
+            <option>宁夏	</option>
+            <option>新疆	</option>
+            <option>台湾	</option>
+        </select>
+    </div>
+    <div class="d3 d4"><button type="button" class="i3 i"  id="btm">查询路线</button>
+        <button type="button" class="i4 i"  id="btm1">确认到达选定城市</button>
+    </div>
+</div>
+</body>
+</html>
